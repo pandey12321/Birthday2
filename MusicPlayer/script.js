@@ -3,9 +3,27 @@ let song = document.getElementById("song");
 let ctrl = document.getElementById("ctrl");
 let playPause = document.getElementById("playPause");
 
+
+// time fomate
+
+function formatTime(time) {
+  let minutes = Math.floor(time / 60);
+  let seconds = Math.floor(time % 60);
+  if (seconds < 10) seconds = "0" + seconds;
+  return `${minutes}:${seconds}`;
+}
+
+
+// Timespan
+
+let crTime = document.getElementById("crTime");
+let duration = document.getElementById("duration");
+
 song.onloadeddata = function () {
   progress.max = song.duration;
   progress.value = song.currentTime;
+  duration.innerText = formatTime(song.duration);
+  crTime.innerText = formatTime(song.currentTime);
 };
 
 ctrl.addEventListener("click", () => {
@@ -19,14 +37,17 @@ ctrl.addEventListener("click", () => {
     playPause.classList.remove("fa-pause");
   }
 });
-if (song.play()) {
-  setInterval(() => {
-    progress.value = song.currentTime;
-  }, 500);
-}
+
+// Updation of time and progress bar
+
+song.addEventListener("timeupdate", () => {
+  progress.value = song.currentTime;
+  crTime.innerText = formatTime(song.currentTime);
+});
+
+
 
 progress.onchange = function () {
-  song.play();
   song.currentTime = progress.value;
   song.play();
   playPause.classList.remove("fa-play");
@@ -54,7 +75,7 @@ function nextSong(){
   song.src = songs[songNumber].song;
   image.src = songs[songNumber].src;
   // changing name of song
-  songName.innerText = songs[songNumber].song;
+  songName.innerText = songs[songNumber].song.replace(".mp3", "");
 
   playPause.classList.remove("fa-play");
   playPause.classList.add("fa-pause");
@@ -72,7 +93,7 @@ function prevSong(){
   song.src = songs[songNumber].song;
   image.src = songs[songNumber].src;
   // changing name of song
-  songName.innerText = songs[songNumber].song;
+  songName.innerText = songs[songNumber].song.replace(".mp3", "");
 
   playPause.classList.remove("fa-play");
   playPause.classList.add("fa-pause");
@@ -84,21 +105,12 @@ let prev = document.getElementById("prev");
 
 prev.addEventListener("click",prevSong);
 
-// automatic play next song when song end
-song.addEventListener("ended",nextSong);
 
-// password validation
+// automatically play nex song when one song ends
 
-/* let password = document.getElementById("password");
-let submit = document.getElementById("submit");
-let popUp = document.getElementById("popUp");
-let player = document.getElementById("player");
+song.addEventListener("ended", nextSong);
 
-submit.addEventListener("click",()=>{
-  if(password.value=="Mayank"){
-    popUp.classList.add("hidden");
-    player.classList.remove("hidden");
-  }else{
-    alert("Enter Correct Password");
-  }
-}) */
+
+
+
+

@@ -7,7 +7,7 @@
    background-color:#f5313b;
    border-radius: 4px;
    cursor: pointer;
-   margin: 40px 0;
+   margin: 40px 0 20px;
 }
 #progress::-webkit-slider-thumb{
     -webkit-appearance: none;
