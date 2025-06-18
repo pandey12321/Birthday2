@@ -60,7 +60,7 @@ let songs = [
   { song: "Disha.mp3", src: "Disha.jpg" },
   { song: "1 August.mp3", src: "dipty2.jpg" },
   { song: "Lawyer.mp3", src: "lawyer.jpg" },
-  { song: "From My Eyes.mp3", src: "dipty3.jpg" },
+  { song: "From My Eyes.mp3", src: "Dipty3.jpg" },
   { song: "Bhojpuri.mp3", src: "dipty4.jpg" },
 ];
 let songNumber = 0;
