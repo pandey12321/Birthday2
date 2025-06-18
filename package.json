@@ -1,6 +1,6 @@
 {
   "scripts": {
-  "watch:all": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx tailwindcss -i ./MusicPlayer/src/input.css -o ./MusicPlayer/src/output.css --watch\" \"npx tailwindcss -i ./Instruction/src/input.css -o ./Instruction/src/output.css --watch\" "
+  "watch:all": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx tailwindcss -i ./Instruction/src/input.css -o ./Instruction/src/output.css --watch\" "
 },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.10",
