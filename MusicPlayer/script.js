@@ -53,7 +53,7 @@ progress.onchange = function () {
   playPause.classList.remove("fa-play");
   playPause.classList.add("fa-pause");
 };
-
+  
 // all songs
 let songs = [
   { song: "Happy Birthday.mp3", src: "dipty1.jpg" },
