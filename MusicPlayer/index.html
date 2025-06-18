@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://kit.fontawesome.com/e4859e641f.js" crossorigin="anonymous"></script>
+</head>
+<body class="h-screen grid place-items-center bg-gradient-to-b
+from-[#db2777]
+via-[#ef4444]
+to-[#f97316]">
+    
+
+   <!-- password authentication -->
+
+<!-- <div id="popUp" class="p-12 rounded-lg flex flex-col gap-6" style="box-shadow:
+    0 0 15px red,
+    0 0 25px blue,
+    0 0 35px green,
+    0 0 45px purple;">
+    <h1 class="text-center text-[1.5rem] text-white  font-semibold">Mera Dusara Name?</h1>
+    <input type="password" id="password" placeholder="Password" required class="bg-gray-300 rounded-lg p-2 border border-gray-700 outline-none focus:outline-none">
+    <button id="submit" class="bg-[#f5313b] py-2 rounded-lg text-white border border-gray-900 cursor-pointer hover:bg-[#f27a7a]">Submit</button>
+</div> -->
+
+
+
+    <div id="player" class="bg-gradient-to-b
+from-[#db2777]
+via-[#ef4444]
+to-[#f97316] p-3 w-[300px] rounded-lg" style="box-shadow:
+    0 0 15px red,
+    0 0 25px blue,
+    0 0 35px green,
+    0 0 45px purple;">
+        <nav class="flex justify-between mb-6 relative">
+            <div id="circle" class="bg-amber-50 rounded-full w-[36px] h-[36px] flex items-center justify-center text-red-400 shadow-xl">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <img class="w-[64px] h-[64px] rounded-full absolute top-[-50px] left-3/8 shadow-[0px_2px_3px_1px_black]" src="logo.jpg" alt="">
+            <div id="circle" class="bg-amber-50 rounded-full w-[36px] h-[36px] flex items-center justify-center text-red-400 shadow-xl">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+        </nav>
+        <img id="img" src="dipty1.jpg" alt="" class="w-42 rounded-full mx-auto border-6 border-white mb-4 shadow-[0px_0px_30px_0px_white,0px_0px_50px_0px_red,0px_0px_80px_0px_yellow]">
+        <h1 id="sname" class="font-semibold text-center">Happy Birthday.mp3</h1>
+        <p class="text-center font-bold text-[crimson] text-shadow-[0px_0px_2px_white] capitalize">happy birthday dipty</p>
+
+        <audio id="song"> 
+            <source id="songLink" src="Happy Birthday.mp3">
+        </audio>
+        <input type= "range"  id="progress">
+
+        <div id="control" class="flex justify-center space-x-4 items-center mb-8">
+            <div id="prev" class="bg-white rounded-full text-[#f5313b] h-[48px] w-[48px] flex items-center justify-center shadow-md shadow-black cursor-pointer">
+                <i class="fa-solid fa-backward "></i>
+            </div>
+            
+            <div id="ctrl" class="bg-[#f5313b] rounded-full text-white h-[60px] w-[60px] flex items-center justify-center shadow-md shadow-black cursor-pointer">
+                <i id="playPause" class="fa-solid fa-play"></i>
+            </div>
+            
+            <div id="next" class="bg-white rounded-full text-[#f5313b] h-[48px] w-[48px] flex items-center justify-center shadow-md shadow-black cursor-pointer">
+                <i class="fa-solid fa-forward "></i>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js
+    "></script>
+
+</body>
+</html>
