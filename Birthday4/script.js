@@ -1,5 +1,3 @@
-
-alert("okay press kro uske baad khi bhi touch kro screen me song play hoga")
 window.onload = () =>{
   
     let text = document.getElementsByClassName("wish")[0];
