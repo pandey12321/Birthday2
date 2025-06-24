@@ -2,7 +2,7 @@ window.onload = () =>{
   
     let text = document.getElementsByClassName("wish")[0];
     
-    aakuWriter(text, "Happy Wala Birthday Dipty, Thank you soo much for being my love. You have tought me many things. I missed you so much. Happy birthday to my dearest one.");
+    aakuWriter(text, "Dipty Wishing you a day filled with love, laughter, and all the happiness in the world May this year bring you new adventures, beautiful moments, and dreams turning into reality. Keep smiling, keep shining — you truly deserve the best life has to offer. Have a wonderful birthday! 🎂🌸🎁");
     
 };
 
